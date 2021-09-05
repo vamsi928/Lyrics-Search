@@ -19,6 +19,7 @@ export const Search = () => {
           heading: "Search Results",
         })
       );
+    setTrackTitle("");
   };
   return (
     <Card className="mb-3">
@@ -38,7 +39,11 @@ export const Search = () => {
                 value={trackTile}
               />
             </div>
-            <Button className="btn btn-block mt-2" onClick={getSearchTrack}>
+            <Button
+              className="btn btn-block mt-2"
+              onClick={getSearchTrack}
+              disabled={!trackTile}
+            >
               Get Track Lyrics
             </Button>
           </form>
